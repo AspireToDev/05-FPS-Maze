@@ -1,9 +1,14 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Key/key.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Exit/Exit.gd" type="Script" id=3]
 [ext_resource path="res://UI/Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Key.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Zombie.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Creepy Ambience.wav" type="AudioStream" id=8]
+[ext_resource path="res://UI/Music.gd" type="Script" id=9]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 50 )
@@ -158,14 +163,24 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 [node name="Camera" type="Camera" parent="Player/Pivot"]
 current = true
 
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+transform = Transform( 2.38498e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, 2.38498e-09, 41.9571, 0, 15.7422 )
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Menu" parent="UI" instance=ExtResource( 4 )]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -38.469
+autoplay = true
+script = ExtResource( 9 )
 
 [node name="Key" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [node name="Zombie" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="body_entered" from="Maze/Exit" to="Maze/Exit" method="_on_Exit_body_entered"]
+[connection signal="finished" from="Music" to="Music" method="_on_Music_finished"]
