@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/Main.gd" type="Script" id=1]
 
-[node name="Main" type="Control"]
+[node name="Win" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -18,7 +18,8 @@ color = Color( 0.270588, 0.235294, 0.235294, 1 )
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 300.0
-text = "Welcome to the Maze
+text = "You found the exit! You Win!
+
 "
 align = 1
 valign = 1
@@ -28,7 +29,7 @@ margin_left = 467.0
 margin_top = 250.0
 margin_right = 567.0
 margin_bottom = 290.0
-text = "Play Game"
+text = "Play Again?"
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 467.0
