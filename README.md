@@ -20,9 +20,9 @@ I utilized https://musescore.org/en for the background music
 ## Future Development
 This is a project that I didn't have a whole lot of creative inspiration for when I started, but when I started to hear the background music with the creepy pipe organ, I thought of a couple cool features that I might work on given time.
 - Victorian Vampire Mansion Theme with:
-- Updated enemy (more visually interesting with rudimentary AI)
-- Darker Lighting utilizing a roof to cut off the skylight and some type of torch, candle, lamp to illuminate the maze.
-- Dark wood grain wall textures
-- More unique challenges
+  - Updated enemy (more visually interesting with rudimentary AI)
+  - Darker Lighting utilizing a roof to cut off the skylight and some type of torch, candle, lamp to illuminate the maze.
+  - Dark wood grain wall textures
+  - More unique challenges
 ## Created by
 Ian Brower
